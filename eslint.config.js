@@ -23,8 +23,16 @@ export default defineConfig([
     },
     rules: {
       ...reactHooks.configs["recommended-latest"].rules,
-      "prettier/prettier": "warn",
+
+      // Formatting & Type Safety
+      "prettier/prettier": "off",
+      "@typescript-eslint/no-explicit-any": "error",
+
+      // React Refresh Optimization
       "react-refresh/only-export-components": "off",
+
+      // No console.log (allow only warn & error)
+      "no-console": ["error", { allow: ["warn", "error"] }],
     },
     languageOptions: {
       ecmaVersion: 2020,
