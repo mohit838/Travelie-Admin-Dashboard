@@ -1,9 +1,9 @@
-import * as React from "react"
-import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
-import { cva } from "class-variance-authority"
-import { ChevronDownIcon } from "lucide-react"
+import * as React from "react";
+import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
+import { cva } from "class-variance-authority";
+import { ChevronDownIcon } from "lucide-react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 function NavigationMenu({
   className,
@@ -11,7 +11,7 @@ function NavigationMenu({
   viewport = true,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Root> & {
-  viewport?: boolean
+  viewport?: boolean;
 }) {
   return (
     <NavigationMenuPrimitive.Root
@@ -26,7 +26,7 @@ function NavigationMenu({
       {children}
       {viewport && <NavigationMenuViewport />}
     </NavigationMenuPrimitive.Root>
-  )
+  );
 }
 
 function NavigationMenuList({
@@ -42,7 +42,7 @@ function NavigationMenuList({
       )}
       {...props}
     />
-  )
+  );
 }
 
 function NavigationMenuItem({
@@ -55,12 +55,12 @@ function NavigationMenuItem({
       className={cn("tw-:relative", className)}
       {...props}
     />
-  )
+  );
 }
 
 const navigationMenuTriggerStyle = cva(
   "tw-:group tw-:inline-flex tw-:h-9 tw-:w-max tw-:items-center tw-:justify-center tw-:rounded-md tw-:bg-background tw-:px-4 tw-:py-2 tw-:text-sm tw-:font-medium tw-:hover:bg-accent tw-:hover:text-accent-foreground tw-:focus:bg-accent tw-:focus:text-accent-foreground tw-:disabled:pointer-events-none tw-:disabled:opacity-50 tw-:data-[state=open]:hover:bg-accent tw-:data-[state=open]:text-accent-foreground tw-:data-[state=open]:focus:bg-accent tw-:data-[state=open]:bg-accent/50 tw-:focus-visible:ring-ring/50 tw-:outline-none tw-:transition-[color,box-shadow] tw-:focus-visible:ring-[3px] tw-:focus-visible:outline-1"
-)
+);
 
 function NavigationMenuTrigger({
   className,
@@ -79,7 +79,7 @@ function NavigationMenuTrigger({
         aria-hidden="true"
       />
     </NavigationMenuPrimitive.Trigger>
-  )
+  );
 }
 
 function NavigationMenuContent({
@@ -96,7 +96,7 @@ function NavigationMenuContent({
       )}
       {...props}
     />
-  )
+  );
 }
 
 function NavigationMenuViewport({
@@ -118,7 +118,7 @@ function NavigationMenuViewport({
         {...props}
       />
     </div>
-  )
+  );
 }
 
 function NavigationMenuLink({
@@ -134,7 +134,7 @@ function NavigationMenuLink({
       )}
       {...props}
     />
-  )
+  );
 }
 
 function NavigationMenuIndicator({
@@ -152,7 +152,7 @@ function NavigationMenuIndicator({
     >
       <div className="tw-:bg-border tw-:relative tw-:top-[60%] tw-:h-2 tw-:w-2 tw-:rotate-45 tw-:rounded-tl-sm tw-:shadow-md" />
     </NavigationMenuPrimitive.Indicator>
-  )
+  );
 }
 
 export {
@@ -165,4 +165,4 @@ export {
   NavigationMenuIndicator,
   NavigationMenuViewport,
   navigationMenuTriggerStyle,
-}
+};

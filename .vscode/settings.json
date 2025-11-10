@@ -1,3 +1,61 @@
 {
-  "cSpell.words": ["travelie", "Travellie"]
+  // ============================
+  // CORE FORMATTING BEHAVIOR
+  // ============================
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": false,
+
+  // Run ESLint auto-fix on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.organizeImports": "always"
+  },
+
+  // ============================
+  // PRETTIER SETTINGS
+  // ============================
+  "prettier.semi": true,
+  "prettier.singleQuote": false,
+  "prettier.trailingComma": "es5",
+  "prettier.tabWidth": 2,
+  "prettier.printWidth": 100,
+  "prettier.endOfLine": "auto",
+
+  // Ignore certain files/folders for formatting
+  "prettier.ignorePath": ".prettierignore",
+
+  // ============================
+  // ESLINT INTEGRATION
+  // ============================
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+
+  // Optional: automatically show ESLint problems inline
+  "eslint.alwaysShowStatus": true,
+
+  // ============================
+  // TYPESCRIPT & PROJECT INTELLISENSE
+  // ============================
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.validate.enable": true,
+
+  // ============================
+  // EDITOR QUALITY OF LIFE
+  // ============================
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/dist": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true
+  },
+  "explorer.compactFolders": false
 }

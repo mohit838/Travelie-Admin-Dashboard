@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  travelie-dashboard:
+    container_name: travelie-dashboard
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PORT: ${PORT:-4173} # Default port
+    environment:
+      - PORT=${PORT:-4173}
+    ports:
+      - "${PORT:-4173}:${PORT:-4173}"
+    restart: unless-stopped

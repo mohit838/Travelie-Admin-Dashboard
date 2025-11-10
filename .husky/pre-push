@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Running pre-push quality checks..."
+pnpm format || exit 1
+pnpm lint || exit 1
+pnpm tsc-watch || exit 1
+echo "All checks passed. Safe to push!"
