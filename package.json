@@ -1,7 +1,7 @@
 {
   "name": "travelie",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Mohitul Islam",
   "type": "module",
   "scripts": {
@@ -9,8 +9,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview --host",
-    "format": "prettier --check .",
-    "format-fix": "prettier --write . && eslint --fix .",
+    "format": "prettier --check 'src/**/*.{js,jsx,ts,tsx,json,css,md}'",
+    "format-fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,md}' && eslint --fix .",
     "tsc-watch": "tsc --noEmit",
     "prepare": "husky",
     "prepush-check": "pnpm format && pnpm lint && pnpm tsc-watch"
