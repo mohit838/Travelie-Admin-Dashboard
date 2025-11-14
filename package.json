@@ -8,22 +8,11 @@
     "dev": "vite --host",
     "build": "tsc -b && vite build",
     "lint": "eslint . --max-warnings=0",
-    "lint:fix": "eslint . --fix",
     "preview": "vite preview --host",
-    "format": "prettier --check 'src/**/*.{js,jsx,ts,tsx,json,css,md}'",
+    "format": "prettier --write .",
     "format-fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,md}' && eslint --fix .",
-    "tsc-watch": "tsc --noEmit",
-    "prepare": "husky",
-    "prepush-check": "pnpm format && pnpm lint && pnpm tsc-watch"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{json,css,md}": [
-      "prettier --write"
-    ]
+    "tsc-check": "tsc --noEmit",
+    "prepare": "husky"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "1.1.15",
@@ -34,9 +23,11 @@
     "@tailwindcss/vite": "4.1.17",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
+    "date-fns": "4.1.0",
     "lucide-react": "0.553.0",
     "react": "19.1.1",
     "react-dom": "19.1.1",
+    "react-router": "7.9.6",
     "tailwind-merge": "3.3.1",
     "tailwindcss": "4.1.17"
   },

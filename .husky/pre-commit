@@ -1,4 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-pnpm lint-staged
+echo "Running Pre-commit checks..."
+pnpm lint-staged      # only check staged files
+
+echo "Running TypeScript check..."
+pnpm tsc-check       # TypeScript type check
