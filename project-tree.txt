@@ -1,0 +1,88 @@
+.
+├── components.json
+├── DEV_GUIDE.md
+├── docker-compose.yml
+├── Dockerfile
+├── eslint.config.js
+├── index.html
+├── lint-staged.config.js
+├── package.json
+├── pnpm-lock.yaml
+├── project-tree.txt
+├── public
+│   └── vite.svg
+├── README.md
+├── src
+│   ├── app
+│   │   ├── app-store.ts
+│   │   ├── outlets
+│   │   │   ├── auth-outlet.tsx
+│   │   │   ├── no-auth-outlet.tsx
+│   │   │   └── permission-outlet.tsx
+│   │   └── router.tsx
+│   ├── App.css
+│   ├── App.tsx
+│   ├── features
+│   │   └── dashboard
+│   │       ├── api
+│   │       │   └── api.ts
+│   │       ├── components
+│   │       │   └── dashboard.tsx
+│   │       ├── constant.ts
+│   │       ├── fetcher
+│   │       │   └── fetcher.ts
+│   │       ├── hooks
+│   │       │   └── hooks.ts
+│   │       ├── index.tsx
+│   │       └── store
+│   ├── index.css
+│   ├── main.tsx
+│   └── shared
+│       ├── assets
+│       │   └── react.svg
+│       ├── components
+│       │   ├── custom-entity-page
+│       │   │   └── entity-page.tsx
+│       │   └── layout
+│       │       ├── dashboard-layout.tsx
+│       │       ├── header
+│       │       │   ├── header.tsx
+│       │       │   ├── theme-toggle.tsx
+│       │       │   └── user-menu.tsx
+│       │       └── sidebar
+│       │           ├── overlay.tsx
+│       │           ├── sidebar-item.tsx
+│       │           ├── sidebar.tsx
+│       │           └── user-section.tsx
+│       ├── dummy-data
+│       │   └── Data.ts
+│       ├── fetcher
+│       │   └── fetcher.ts
+│       ├── hooks
+│       │   ├── use-mobile.ts
+│       │   └── use-theme.ts
+│       ├── lib
+│       │   ├── axios-client.ts
+│       │   ├── date-utils.ts
+│       │   ├── formatters.ts
+│       │   └── utils.ts
+│       ├── types
+│       │   └── breadcrumb.ts
+│       └── ui
+│           ├── button.tsx
+│           ├── card.tsx
+│           ├── input.tsx
+│           ├── navigation-menu.tsx
+│           ├── separator.tsx
+│           ├── sheet.tsx
+│           ├── sidebar.tsx
+│           ├── skeleton.tsx
+│           ├── table.tsx
+│           └── tooltip.tsx
+├── tailwind.config.js
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+24 directories, 61 files

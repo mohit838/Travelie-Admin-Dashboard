@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { defineConfig } from "vite";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
@@ -13,6 +12,9 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      "@app": path.resolve(__dirname, "./src/app"),
+      "@shared": path.resolve(__dirname, "./src/shared"),
+      "@modules": path.resolve(__dirname, "./src/modules"),
     },
   },
 });

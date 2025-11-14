@@ -14,3 +14,7 @@
     docker build -f Dockerfile.dev -t travelie-dev .
     docker run -it -p 5173:5173 -v $(pwd):/app travelie-dev
 ```
+
+## Get and Save Project Tree
+
+- `tree -I ".vscode|temp|.git|node_modules|dist" > project-tree.txt`

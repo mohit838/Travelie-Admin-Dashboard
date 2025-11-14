@@ -1,6 +1,3 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 echo "Running Pre-commit checks..."
 pnpm lint-staged      # only check staged files
 

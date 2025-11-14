@@ -1,5 +1,6 @@
 import js from "@eslint/js";
 import prettier from "eslint-config-prettier";
+import importPlugin from "eslint-plugin-import";
 import eslintPluginPrettier from "eslint-plugin-prettier";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
@@ -20,9 +21,23 @@ export default defineConfig([
     ],
     plugins: {
       prettier: eslintPluginPrettier,
+      import: importPlugin,
     },
     rules: {
       ...reactHooks.configs["recommended-latest"].rules,
+
+      // Permission boundaries (DDD)
+      "import/no-restricted-paths": [
+        "error",
+        {
+          zones: [
+            {
+              target: "./src/features/dashboard",
+              from: "./src/features/user",
+            },
+          ],
+        },
+      ],
 
       // Formatting & Type Safety
       "prettier/prettier": "off",
