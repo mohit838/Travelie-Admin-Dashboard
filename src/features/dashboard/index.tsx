@@ -4,7 +4,7 @@ import { DASHBOARD_BREADCRUMBS } from "./constant";
 
 const DashboardIndexPage = () => {
   return (
-    <EntityPage title="Dashboard" breadcrumbs={DASHBOARD_BREADCRUMBS}>
+    <EntityPage title="" breadcrumbs={DASHBOARD_BREADCRUMBS}>
       <MainDashboard />
     </EntityPage>
   );

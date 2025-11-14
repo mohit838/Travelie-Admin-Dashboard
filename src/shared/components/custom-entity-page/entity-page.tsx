@@ -31,7 +31,7 @@ const EntityPage = ({ title, breadcrumbs = [], children }: EntityPageProps) => {
       )}
 
       {/* Page Title */}
-      <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">{title}</h1>
+      {title && <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">{title}</h1>}
 
       {/* Page Content */}
       <div>{children}</div>

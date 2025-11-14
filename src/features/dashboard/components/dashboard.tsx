@@ -5,7 +5,7 @@ const MainDashboard = () => {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900 lg:text-3xl dark:text-white">
-            Dashboard
+            Jhone Doe
           </h1>
           <p className="dark:text -gray-400 mt-1 text-gray-600">
             Welcome back! Here's the overview.
