@@ -20,24 +20,24 @@
 │   │   │   ├── no-auth-outlet.tsx
 │   │   │   └── permission-outlet.tsx
 │   │   └── router.tsx
-│   ├── App.css
 │   ├── App.tsx
 │   ├── features
+│   │   ├── auth
+│   │   │   └── login
+│   │   │       └── index.tsx
 │   │   └── dashboard
 │   │       ├── api
-│   │       │   └── api.ts
 │   │       ├── components
 │   │       │   └── dashboard.tsx
 │   │       ├── constant.ts
 │   │       ├── fetcher
-│   │       │   └── fetcher.ts
 │   │       ├── hooks
-│   │       │   └── hooks.ts
 │   │       ├── index.tsx
 │   │       └── store
 │   ├── index.css
 │   ├── main.tsx
 │   └── shared
+│       ├── api-routes.ts
 │       ├── assets
 │       │   └── react.svg
 │       ├── components
@@ -63,9 +63,8 @@
 │       │   └── use-theme.ts
 │       ├── lib
 │       │   ├── axios-client.ts
-│       │   ├── date-utils.ts
-│       │   ├── formatters.ts
 │       │   └── utils.ts
+│       ├── page-routes.ts
 │       ├── types
 │       │   └── breadcrumb.ts
 │       └── ui
@@ -85,4 +84,4 @@
 ├── tsconfig.node.json
 └── vite.config.ts
 
-24 directories, 61 files
+26 directories, 58 files

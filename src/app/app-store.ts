@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 interface AppState {
   accessToken: string | null;
@@ -9,26 +10,40 @@ interface AppState {
 
   logout: () => void;
 
-  // auth control
   isAuthenticated: boolean;
   permissions: string[];
 }
 
-export const useAppStore = create<AppState>((set) => ({
-  accessToken: null,
-  refreshToken: null,
-
-  setAccessToken: (t) => set({ accessToken: t, isAuthenticated: !!t }),
-  setRefreshToken: (t) => set({ refreshToken: t }),
-
-  logout: () =>
-    set({
+export const useAppStore = create<AppState>()(
+  persist(
+    (set) => ({
       accessToken: null,
       refreshToken: null,
       isAuthenticated: false,
       permissions: [],
-    }),
 
-  isAuthenticated: false,
-  permissions: [],
-}));
+      setAccessToken: (t) => {
+        set({
+          accessToken: t,
+          isAuthenticated: !!t,
+        });
+      },
+
+      setRefreshToken: (t) => {
+        set({ refreshToken: t });
+      },
+
+      logout: () => {
+        set({
+          accessToken: null,
+          refreshToken: null,
+          isAuthenticated: false,
+          permissions: [],
+        });
+      },
+    }),
+    {
+      name: "app-auth",
+    }
+  )
+);

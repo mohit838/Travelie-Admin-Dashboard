@@ -47,7 +47,7 @@ export default defineConfig([
       "react-refresh/only-export-components": "off",
 
       // No console.log (allow only warn & error)
-      "no-console": ["error", { allow: ["warn", "error"] }],
+      "no-console": ["error", { allow: ["debug", "warn", "error"] }],
     },
     languageOptions: {
       ecmaVersion: 2020,
